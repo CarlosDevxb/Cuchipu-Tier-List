@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tier List Maker - CuchiOps Edition</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="./src/css/main.css">
+</head>
+<body>
+    <main id="app">
+    <header class="main-header">
+        <h1>Tier List <span class="accent">Master</span></h1>
+        <p class="subtitle">Arrastra, suelta y clasifica tus items favoritos</p>
+    </header>
+
+    <div class="tier-board">
+        
+        <div id="rows-container">
+            <div class="tier-row">
+                <div class="tier-label s-rank" contenteditable="true">S</div>
+                <div class="tier-content" id="row-s">
+                    </div>
+                <div class="tier-settings">
+                    <button class="btn-icon delete-row-btn" title="Eliminar fila">✕</button>
+                    <div class="handle">⋮⋮</div>
+                </div>
+            </div>
+
+            <div class="tier-row">
+                <div class="tier-label a-rank" contenteditable="true">A</div>
+                <div class="tier-content" id="row-a"></div>
+                <div class="tier-settings">
+                    <button class="btn-icon delete-row-btn">✕</button>
+                    <div class="handle">⋮⋮</div>
+                </div>
+            </div>
+
+            <div class="tier-row">
+                <div class="tier-label b-rank" contenteditable="true">B</div>
+                <div class="tier-content" id="row-b"></div>
+                <div class="tier-settings">
+                    <button class="btn-icon delete-row-btn">✕</button>
+                    <div class="handle">⋮⋮</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-area">
+            <button id="add-row-btn" class="btn btn-primary">
+                + Agregar Fila
+            </button>
+            <span class="row-counter" id="row-count-display">3 / 8 Filas</span>
+        </div>
+    </div>
+
+    <section class="image-bank-section">
+        <div class="bank-header">
+            <h3>Banco de Imágenes</h3>
+            <label for="image-upload" class="btn btn-secondary upload-btn">
+                Subir Imágenes 📂
+            </label>
+            <input type="file" id="image-upload" multiple accept="image/*" hidden>
+        </div>
+        
+        <div class="image-bank" id="bank">
+                    </div>
+    </section>
+
+    <button id="save-btn" class="fab-btn" title="Guardar Imagen">💾</button>
+
+</main>
+    <script type="module" src="./src/js/app.js"></script>
+</body>
+</html>
